@@ -38,6 +38,7 @@ public class ServerFilesSettingsTest {
 
     @Before public void setUp() {
         activity = Robolectric.buildActivity(Activity.class).setup().get();
+        ServerConfig.useSecretsForTesting(app.spicetify.extension.spotify.localserver.SecretBox.inMemory());
         ServerConfig.initialize(activity);
         ServerConfig.configure(false, "https://dav.example/music/", "fixture-user", "fixture-secret");
         form = new ServerFilesSettings(activity);

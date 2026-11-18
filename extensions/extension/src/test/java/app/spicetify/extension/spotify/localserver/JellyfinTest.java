@@ -157,6 +157,7 @@ public class JellyfinTest {
         Field saved = ServerConfig.class.getDeclaredField("preferences");
         saved.setAccessible(true);
         saved.set(null, null);
+        ServerConfig.useSecretsForTesting(SecretBox.inMemory());
         ServerConfig.initialize(app);
         ServerConfig.forget();
         JellyfinClient.Account account = new JellyfinClient.Account(

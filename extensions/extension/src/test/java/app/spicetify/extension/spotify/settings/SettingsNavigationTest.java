@@ -53,6 +53,7 @@ public class SettingsNavigationTest {
     @Config(shadows = ThemeAndServer.class)
     public void appearanceAndServerPagesRenderTheirContent() {
         var application = RuntimeEnvironment.getApplication();
+        ServerConfig.useSecretsForTesting(app.spicetify.extension.spotify.localserver.SecretBox.inMemory());
         ServerConfig.initialize(application);
         try (var controller = Robolectric.buildActivity(Activity.class).setup()) {
             assertTrue(hasText(page(controller.get(), SpicetifySettingsScreen.PAGE_APPEARANCE).getWindow().getDecorView(), "OLED"));

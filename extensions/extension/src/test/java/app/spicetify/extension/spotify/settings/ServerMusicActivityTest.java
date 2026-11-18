@@ -24,6 +24,7 @@ import org.robolectric.android.controller.ActivityController;
 public class ServerMusicActivityTest {
     @Test public void emptyLibraryShowsRecoveryAndKeepsSearchAvailable() {
         Application application = RuntimeEnvironment.getApplication();
+        ServerConfig.useSecretsForTesting(app.spicetify.extension.spotify.localserver.SecretBox.inMemory());
         ServerConfig.initialize(application);
         ServerConfig.forget();
         ActivityController<ServerMusicActivity> controller = Robolectric.buildActivity(ServerMusicActivity.class)
