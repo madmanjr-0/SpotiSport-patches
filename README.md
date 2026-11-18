@@ -1,4 +1,22 @@
-# Spicetify Android patches
+# SpotiSport patches
+
+> [!IMPORTANT]
+> **Unofficial fork** of [spicetify/morphe-patches](https://github.com/spicetify/morphe-patches), kept under
+> the same GPLv3 license. It is not affiliated with or endorsed by the Spicetify project, Morphe or Spotify.
+> Differences from upstream:
+>
+> - The WebDAV password and the Jellyfin session token are sealed with an Android Keystore key (AES-256-GCM)
+>   instead of being saved as plain text. Plain-text values from older installs are sealed once and erased.
+>   A secret that cannot be opened, for example after restoring app data onto another phone, is dropped and
+>   asked for again.
+> - The track server process receives its settings through a file replaced atomically, instead of
+>   `MODE_MULTI_PROCESS` preferences.
+>
+> Not yet verified on a device. Everything else below is upstream's documentation.
+
+Based on upstream's original text:
+
+## Spicetify Android patches
 
 Spotify Android customizations for use with [Morphe](https://morphe.software/).
 This repository publishes patch source and bundles, not Spotify APKs.
@@ -8,7 +26,7 @@ This repository publishes patch source and bundles, not Spotify APKs.
 > These patches target Spotify 9.1.80.2221, ARM64. Other Spotify versions are
 > not supported.
 
-[**➕ Add Spicetify to Morphe**](https://morphe.software/add-source?github=spicetify/morphe-patches/tree/main)
+[**➕ Add Spicetify to Morphe**](https://morphe.software/add-source?github=madmanjr-0/SpotiSport-patches/tree/main)
 
 Open this link on Android with Morphe Manager installed to add the stable
 source. Releases are published from `main`.
@@ -66,7 +84,7 @@ Pixel 8 with a 35,000-track Jellyfin library.
 
 ## Install
 
-Releases are listed on the [releases page](https://github.com/spicetify/morphe-patches/releases).
+Releases are listed on the [releases page](https://github.com/madmanjr-0/SpotiSport-patches/releases).
 Version 1.0.0 was patched with Morphe Manager and tested on a Pixel 8.
 
 A patched APK uses a different signing certificate from stock Spotify. Installing it with
@@ -82,7 +100,7 @@ instead of adding it again. To add it manually and patch Spotify:
 2. Paste the following source URL, then select **Add**.
 
    ```text
-   https://raw.githubusercontent.com/spicetify/morphe-patches/refs/heads/main/patches-bundle.json
+   https://raw.githubusercontent.com/madmanjr-0/SpotiSport-patches/refs/heads/main/patches-bundle.json
    ```
 
    If your source uses the former `dev` URL, switch to this `main` URL.

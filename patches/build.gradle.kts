@@ -4,10 +4,10 @@ patches {
     about {
         name = "Spicetify Android patches"
         description = "Spotify Android customization patches compatible with Morphe"
-        source = "https://github.com/spicetify/morphe-patches"
+        source = "https://github.com/madmanjr-0/SpotiSport-patches"
         author = "Spicetify"
         contact = "na"
-        website = "https://github.com/spicetify/morphe-patches"
+        website = "https://github.com/madmanjr-0/SpotiSport-patches"
         license = "GPLv3"
     }
 }
