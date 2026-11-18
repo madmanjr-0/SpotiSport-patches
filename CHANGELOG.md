@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/madmanjr-0/SpotiSport-patches/compare/v1.2.0...v1.2.1) (2026-11-18)
+
+### 🐛 Bug Fixes
+
+* check Spotify classes by what they do, not by their dex bytes ([6741682](https://github.com/madmanjr-0/SpotiSport-patches/commit/6741682b28f5c120e7e995537b49705a5d8789ec))
+* seal saved server secrets and hand settings to the track server atomically ([8eb94de](https://github.com/madmanjr-0/SpotiSport-patches/commit/8eb94de4ceb2fdf3a4d2f6f42e47ed5031c41ba9))
+
 ## [1.2.0](https://github.com/spicetify/morphe-patches/compare/v1.1.0...v1.2.0) (2026-10-08)
 
 ### ✨ New Features
